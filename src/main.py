@@ -1,11 +1,10 @@
-import os
+import secrets
 import string
-from secrets import READWISE_API_TOKEN
 
 import requests
 
 url = "https://readwise.io/api/v2/export/"
-headers = {"Authorization": f"Token {READWISE_API_TOKEN}"}
+headers = {"Authorization": f"Token {secrets.READWISE_API_TOKEN}"}
 
 
 def get_word_highlights(updated_after=None):
@@ -75,7 +74,7 @@ bel-i-kohs
     import llm
 
     model = llm.get_model("gpt-4o")
-    model.key = os.environ["OPENAI_API_KEY"]
+    model.key = secrets.OPENAI_API_KEY
     response = model.prompt(prompt_word_only.format(phrase=word))
     return response.text()
 
