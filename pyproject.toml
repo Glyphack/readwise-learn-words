@@ -1,20 +1,17 @@
 [project]
 name = "readwise-language-learn"
 version = "0.1.0"
-description = "Add your description here"
+description = "Generate flashcards from words to learn on readwise"
 authors = [
     { name = "Glyphack", email = "sh.hooshyari@gmail.com" }
 ]
 dependencies = [
     "requests>=2.31.0",
     "beautifulsoup4>=4.12.2",
+    "llm>=0.16",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
